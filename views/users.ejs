@@ -9,17 +9,10 @@
 <% include templates/header.ejs %>
 
 <h1><%= title %></h1>
-
-<p><%= description %></p>
-
-<hr>
-
-<h3><%= videodata.categoryName %></h3>
-
-<ul><% videodata.categories.forEach(v => { %>
-    <li> <%= v.categoryName %> </li>
-    <% }) %>
+<ul>
+    <% for (let i = 0; i < names.length; i++) { %>
+        <li><%= names[i] %></li>
+    <% } %>
 </ul>
-
 </body>
 </html>
